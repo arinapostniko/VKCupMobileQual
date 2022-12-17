@@ -27,8 +27,13 @@ class TopicsViewController: UIViewController {
         "Спорт"
     ]
     
+    var selectedIndex: Int?
+    
     // MARK: - Private properties
-    let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
+    private let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
+    
+    private let deselectedColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.17)
+    private let selectedColor = UIColor(red: 1, green: 0.325, blue: 0.09, alpha: 1)
     
     // MARK: - IBOutlets
     @IBOutlet weak var laterButton: UIButton!
@@ -40,13 +45,14 @@ class TopicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLaterButton()
+        setupButtons()
         setupCollectionView()
     }
     
     // MARK: - Private methods
-    private func setupLaterButton() {
+    private func setupButtons() {
         laterButton.alpha = 0.9
+        proceedButton.isHidden = true
     }
     
     private func setupCollectionView() {
@@ -65,9 +71,32 @@ extension TopicsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         topics.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: Make clickable
+        let index = indexPath.row
+        let cell = collectionView.cellForItem(at: indexPath) as? TopicsCollectionViewCell
+        if selectedIndex == index {
+            selectedIndex = nil
+            // unselect code here
+            UIView.animate(withDuration: 0.2) {
+                cell?.secondImageView.isHidden = true
+            }
+            UIView.animate(withDuration: 0.4) {
+                cell?.backgroundColor = self.deselectedColor
+                cell?.imageView.isHidden = false
+            }
+        } else {
+            selectedIndex = index
+            // select code here
+            UIView.animate(withDuration: 0.2) {
+                cell?.imageView.isHidden = true
+            }
+            UIView.animate(withDuration: 0.4) {
+                cell?.backgroundColor = self.selectedColor
+                cell?.secondImageView.isHidden = false
+                self.proceedButton.isHidden = false
+            }
+        }
     }
 
     // MARK: UICollectionViewDataSource

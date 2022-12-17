@@ -16,6 +16,7 @@ class TopicsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var topicLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var secondImageView: UIImageView!
     
     // MARK: - Public methods
     static func nib() -> UINib {
