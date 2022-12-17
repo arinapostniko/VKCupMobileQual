@@ -24,5 +24,6 @@ class TopicsCollectionViewCell: UICollectionViewCell {
     
     func setup(with text: String) {
         topicLabel.text = text
+        layer.cornerRadius = 12
     }
 }

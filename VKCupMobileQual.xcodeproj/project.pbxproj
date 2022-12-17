@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		679ADF86AA59F9AB96AC9278 /* Pods_VKCupMobileQual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7888E5C6C09FB518850F403D /* Pods_VKCupMobileQual.framework */; };
 		FE21C347293F9036001B5032 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE21C344293F9027001B5032 /* SF-Pro-Text-Regular.otf */; };
 		FE21C348293F9039001B5032 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE21C345293F9027001B5032 /* SF-Pro-Text-Semibold.otf */; };
 		FE5922422940EE300083C343 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5922402940EE300083C343 /* TopicsCollectionViewCell.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C9F25B56EB11352B751EBAC /* Pods-VKCupMobileQual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKCupMobileQual.release.xcconfig"; path = "Target Support Files/Pods-VKCupMobileQual/Pods-VKCupMobileQual.release.xcconfig"; sourceTree = "<group>"; };
+		7888E5C6C09FB518850F403D /* Pods_VKCupMobileQual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKCupMobileQual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F78E2520D3E2FDCE6274ED87 /* Pods-VKCupMobileQual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKCupMobileQual.debug.xcconfig"; path = "Target Support Files/Pods-VKCupMobileQual/Pods-VKCupMobileQual.debug.xcconfig"; sourceTree = "<group>"; };
 		FE21C344293F9027001B5032 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		FE21C345293F9027001B5032 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		FE5922402940EE300083C343 /* TopicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -39,12 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679ADF86AA59F9AB96AC9278 /* Pods_VKCupMobileQual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EEE985F00F4FEAA655BAE77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F78E2520D3E2FDCE6274ED87 /* Pods-VKCupMobileQual.debug.xcconfig */,
+				5C9F25B56EB11352B751EBAC /* Pods-VKCupMobileQual.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED8149E9195C391D3F55ACEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7888E5C6C09FB518850F403D /* Pods_VKCupMobileQual.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE21C346293F902C001B5032 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +99,8 @@
 			children = (
 				FE5A5C44293F80F50060CF3B /* VKCupMobileQual */,
 				FE5A5C43293F80F50060CF3B /* Products */,
+				1EEE985F00F4FEAA655BAE77 /* Pods */,
+				ED8149E9195C391D3F55ACEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE5A5C56293F80F60060CF3B /* Build configuration list for PBXNativeTarget "VKCupMobileQual" */;
 			buildPhases = (
+				80FA766EED4CC83B92268888 /* [CP] Check Pods Manifest.lock */,
 				FE5A5C3E293F80F50060CF3B /* Sources */,
 				FE5A5C3F293F80F50060CF3B /* Frameworks */,
 				FE5A5C40293F80F50060CF3B /* Resources */,
+				4842224A548585B729F34537 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +205,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4842224A548585B729F34537 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKCupMobileQual/Pods-VKCupMobileQual-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKCupMobileQual/Pods-VKCupMobileQual-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKCupMobileQual/Pods-VKCupMobileQual-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80FA766EED4CC83B92268888 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKCupMobileQual-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE5A5C3E293F80F50060CF3B /* Sources */ = {
@@ -330,6 +398,7 @@
 		};
 		FE5A5C57293F80F60060CF3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F78E2520D3E2FDCE6274ED87 /* Pods-VKCupMobileQual.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -359,6 +428,7 @@
 		};
 		FE5A5C58293F80F60060CF3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9F25B56EB11352B751EBAC /* Pods-VKCupMobileQual.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
