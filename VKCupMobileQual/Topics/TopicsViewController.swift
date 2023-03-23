@@ -28,12 +28,15 @@ class TopicsViewController: UIViewController {
     ]
     
     var selectedIndex: Int?
+    var selectedIndexPath: IndexPath?
     
     // MARK: - Private properties
     private let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
     
     private let deselectedColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.17)
     private let selectedColor = UIColor(red: 1, green: 0.325, blue: 0.09, alpha: 1)
+    
+    private var selectedCells = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var laterButton: UIButton!
@@ -78,6 +81,8 @@ extension TopicsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if selectedIndex == index {
             selectedIndex = nil
             // unselect code here
+            selectedCells -= 1
+            print(selectedCells)
             UIView.animate(withDuration: 0.2) {
                 cell?.secondImageView.isHidden = true
             }
@@ -88,6 +93,8 @@ extension TopicsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         } else {
             selectedIndex = index
             // select code here
+            selectedCells += 1
+            print(selectedCells)
             UIView.animate(withDuration: 0.2) {
                 cell?.imageView.isHidden = true
             }
@@ -96,6 +103,10 @@ extension TopicsViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 cell?.secondImageView.isHidden = false
                 self.proceedButton.isHidden = false
             }
+        }
+        
+        if selectedCells == 0 {
+            self.proceedButton.isHidden = true
         }
     }
 
