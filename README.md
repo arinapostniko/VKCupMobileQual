@@ -4,7 +4,7 @@ The task of the qualifying stage of mobile qualification VK Cup '22-23.
 ## Screenshots
 
 <p align="left">
-<img src="images/Simulator Screen Shot - iPhone 14 Pro - 2023-03-23 at 12.44.32.png" width="300">
+<img src="images/Screenshot 2023-08-03 at 6.27.46 PM.png" width="400">
 </p>
 
 ## About
