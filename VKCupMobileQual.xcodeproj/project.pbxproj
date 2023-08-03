@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		679ADF86AA59F9AB96AC9278 /* Pods_VKCupMobileQual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7888E5C6C09FB518850F403D /* Pods_VKCupMobileQual.framework */; };
+		679ADF86AA59F9AB96AC9278 /* Pods_VKCupMobileQual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7888E5C6C09FB518850F403D /* Pods_VKCupMobileQual.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FE21C347293F9036001B5032 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE21C344293F9027001B5032 /* SF-Pro-Text-Regular.otf */; };
 		FE21C348293F9039001B5032 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE21C345293F9027001B5032 /* SF-Pro-Text-Semibold.otf */; };
 		FE5922422940EE300083C343 /* TopicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5922402940EE300083C343 /* TopicsCollectionViewCell.swift */; };
